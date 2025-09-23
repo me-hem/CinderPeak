@@ -1,6 +1,7 @@
 #pragma once
 #include "PeakLogger.hpp"
 #include "StorageEngine/GraphStatistics.hpp"
+#include "PolicyConfiguration.hpp"
 #include "StorageEngine/Utils.hpp"
 #include "StorageInterface.hpp"
 #include <memory>
@@ -21,6 +22,7 @@ public:
       nullptr;
   std::shared_ptr<PeakStorageInterface<VertexType, EdgeType>> active_storage =
       nullptr;
+  std::shared_ptr<PolicyHandler> pHandler = nullptr;
 };
 
 } // namespace PeakStore
